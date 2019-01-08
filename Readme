@@ -1,0 +1,13 @@
+git init
+git config --global user.name "js-nanodegree@outlook.com"
+git config --global user.email "js-nanodegree@outlook.com"
+git config --list
+
+Добавление в кеш
+git add
+
+удаление файла из кеша
+git rm --cached .txt
+
+git commit -a -m "init"
+
