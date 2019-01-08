@@ -11,3 +11,24 @@ git rm --cached .txt
 
 git commit -a -m "init"
 
+git add *
+git status
+
+возврат состояния.
+git checkout -- .txt 
+
+git log
+
+git checkout -b new_F
+Ветка
+git branch
+переход по веткам
+git checkout name
+создание веток
+git branch name
+
+git remote add origin https://github.com/Js-Nanodegree/FireBase.git
+git push -u origin master
+
+
+
