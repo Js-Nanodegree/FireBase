@@ -30,5 +30,7 @@ git branch name
 git remote add origin https://github.com/Js-Nanodegree/FireBase.git
 git push -u origin master
 
-
+git add *
+git commit -m '2' 
+git push -u origin master2
 
