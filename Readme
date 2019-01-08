@@ -34,3 +34,14 @@ git add *
 git commit -m '2' 
 git push -u origin master2
 
+heroku login
+node --version
+npm --version
+git --version
+
+git clone
+cd 
+heroku create
+git push heroku master
+heroku ps:scale web=1
+heroku open
