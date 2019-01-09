@@ -1,22 +1,15 @@
 {
-  "name": "js-nanodegree",
-  "version": "1.0.1",
-  "description": "git init\r git config --global user.name \"js-nanodegree@outlook.com\"\r git config --global user.email \"js-nanodegree@outlook.com\"\r git config --list",
+  "name": "asa",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Js-Nanodegree/FireBase.git"
-  },
-  "author": "Yakimov V.A.",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Js-Nanodegree/FireBase/issues"
-  },
-  "homepage": "https://github.com/Js-Nanodegree/FireBase#readme",
   "dependencies": {
+    "crypto": "^1.0.1",
     "express": "^4.16.4",
     "nodemon": "^1.18.9"
   }
