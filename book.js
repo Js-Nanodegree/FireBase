@@ -84,3 +84,23 @@ class Programmer extends Person {
       this.name = value
     }
   }
+
+  const myFirstPromise = new Promise((resolve, reject) => {
+    // выполняется асинхронная операция, которая в итоге вызовет:
+    //
+    //   resolve(someValue); // успешное завершение
+    // или
+    //   reject("failure reason"); // неудача
+  });
+
+  const isItDoneYet = new Promise()
+//...
+const checkIfItsDone = () => {
+  isItDoneYet
+    .then(ok => {
+      console.log(ok)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+}
