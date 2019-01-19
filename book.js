@@ -1,105 +1,27 @@
-Clipboard
-
-onCopy
-onCut
-onPaste
-Composition
-onCompositionEnd
-onCompositionStart
-onCompositionUpdate
-
-Keyboard
-
-onKeyDown
-onKeyPress
-onKeyUp
-
-Focus
-
-onFocus
-onBlur
-
-Form
-
-onChange
-onInput
-onSubmit
-
-Mouse
-
-onClick
-onContextMenu
-onDoubleClick
-onDrag
-onDragEnd
-onDragEnter
-onDragExit
-onDragLeave
-onDragOver
-onDragStart
-onDrop
-onMouseDown
-onMouseEnter
-onMouseLeave
-onMouseMove
-onMouseOut
-onMouseOver
-onMouseUp
-Selection
-onSelect
-
-Touch
-
-onTouchCancel
-onTouchEnd
-onTouchMove
-onTouchStart
-
-UI
-
-onScroll
-
-Mouse Wheel
-
-onWheel
-
-Media
-
-onAbort
-onCanPlay
-onCanPlayThrough
-onDurationChange
-onEmptied
-onEncrypted
-onEnded
-onError
-onLoadedData
-onLoadedMetadata
-onLoadStart
-onPause
-onPlay
-onPlaying
-onProgress
-onRateChange
-onSeeked
-onSeeking
-onStalled
-onSuspend
-onTimeUpdate
-onVolumeChange
-onWaiting
-
-Image
-
-onLoad
-onError
-
-Animation
-
-onAnimationStart
-onAnimationEnd
-onAnimationIteration
-
-Transition
-
-onTransitionEnd
+class Form extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = { username: '' }
+      this.handleChange = this.handleChange.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
+    }
+    handleChange(event) {
+      this.setState({ value: event.target.value })
+    }
+    handleSubmit(event) {
+      alert(this.state.username)
+      event.preventDefault()
+    }
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <input type="submit" value="Submit" />
+        </form>
+      )
+    }
+  }
