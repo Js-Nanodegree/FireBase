@@ -221,3 +221,19 @@ class BlogPostExcerpt extends Component {
       )
     }
   }
+
+  class BlogPostExcerpt extends Component {
+    constructor(props) {
+      super(props)
+      this.state = { clicked: false }
+    }
+    render() {
+      return (
+        <div>
+          <h1>Title</h1>
+          <p>Description</p>
+          <p>Clicked: {this.state.clicked}</p>
+        </div>
+      )
+    }
+  }
