@@ -232,7 +232,7 @@ class BlogPostExcerpt extends Component {
         <div>
           <h1>Title</h1>
           <p>Description</p>
-          <p>Clicked: {this.state.clicked}</p>
+          <p>Clicked: {this.setState({ clicked: true })}</p>
         </div>
       )
     }
