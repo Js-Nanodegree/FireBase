@@ -20,13 +20,22 @@ const items = { first, second, ...others }
 items 
 
 const person = {
-    firstName: 'Tom',
-    lastName: 'Cruise',
-    actor: true,
-    age: 54 //made up
-  }
-  const { firstName: name, age } = person
+  firstName: 'Tom',
+  lastName: 'Cruise',
+  actor: true,
+  age: 54 //made up
+}
+const { firstName: name, age } = person
 
-let z =mc
-console.log(z)
+class Person {
+    constructor(name) {
+      this.name = name
+    }
+    hello() {
+      return 'Hello, I am ' + this.name + '.'
+    }
+  }
+
+  const flavio = new Person('Flavio')
+flavio.hello()
 
