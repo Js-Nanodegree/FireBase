@@ -48,3 +48,9 @@ class Programmer extends Person {
   const flavio = new Programmer('Flavio')
   flavio.hello()
 
+  class Person {
+    static genericHello() {
+      return 'Hello'
+    }
+  }
+  Person.genericHello() //Hello
