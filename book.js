@@ -305,3 +305,39 @@ class BlogPostExcerpt extends Component {
       return <Users users={this.state.users} />
     }
   }
+
+  PropTypes.arrayOf(PropTypes.string).isRequired,
+PropTypes.string.isRequired,
+
+PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number
+  })
+
+  PropTypes.arrayOf(PropTypes.string)
+
+  PropTypes.instanceOf(Something)
+
+  PropTypes.oneOf(['Test1', 'Test2']),
+
+  PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
+  import PropTypes from 'prop-types'
+import React from 'react'
+class BlogPostExcerpt extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <p>{this.props.description}</p>
+      </div>
+    )
+  }
+}
+BlogPostExcerpt.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string
+}
+export default BlogPostExcerpt
