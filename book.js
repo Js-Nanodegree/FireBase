@@ -1,27 +1,23 @@
-class Form extends React.Component {
-    constructor(props) {
-      super(props)
-      this.state = { username: '' }
-      this.handleChange = this.handleChange.bind(this)
-      this.handleSubmit = this.handleSubmit.bind(this)
-    }
-    handleChange(event) {
-      this.setState({ value: event.target.value })
-    }
-    handleSubmit(event) {
-      alert(this.state.username)
-      event.preventDefault()
-    }
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.username}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Submit" />
-        </form>
-      )
-    }
-  }
+const { useEffect, useState } = React
+const CounterWithNameAndSideEffect = () => {
+  const [count, setCount] = useState(0)
+  const [name, setName] = useState('Flavio')
+  useEffect(() => {
+    console.log(`Hi ${name} you clicked ${count} times`)
+  })
+  return (
+    <div>
+      <p>
+        Hi {name} you clicked {count} times
+      </p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <button onClick={() => setName(name === 'Flavio' ? 'Roger' : 'Flavio')}>
+        Change name
+      </button>
+    </div>
+  )
+}
+ReactDOM.render(
+  <CounterWithNameAndSideEffect />,
+  document.getElementById('app')
+)
