@@ -53,4 +53,34 @@ class Programmer extends Person {
       return 'Hello'
     }
   }
-  Person.genericHello() //Hello
+  Person.genericHello() 
+
+  class Person {
+    constructor(name) {
+      this.name = name
+    }
+    set name(value) {
+      this.name = value
+    }
+    get name() {
+      return this.name
+    }
+  }
+
+  class Person {
+    constructor(name) {
+      this.name = name
+    }
+    get name() {
+      return this.name
+    }
+  }
+
+  class Person {
+    constructor(name) {
+      this.name = name
+    }
+    set name(value) {
+      this.name = value
+    }
+  }
