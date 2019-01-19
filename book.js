@@ -197,3 +197,12 @@ const Sidebar = props => {
   <Link title="First link" />
   <Link title="Second link" />
 </Sidebar>
+
+const elements = ['one', 'two', 'three'];
+return (
+  <ul>
+    {elements.map((value, index) => {
+      return <li key={index}>{value}</li>
+    })}
+  </ul>
+)
