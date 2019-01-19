@@ -27,6 +27,7 @@ const person = {
 }
 const { firstName: name, age } = person
 
+
 class Person {
     constructor(name) {
       this.name = name
@@ -38,4 +39,12 @@ class Person {
 
   const flavio = new Person('Flavio')
 flavio.hello()
+
+class Programmer extends Person {
+    hello() {
+      return super.hello() + ' I am a programmer.'
+    }
+  }
+  const flavio = new Programmer('Flavio')
+  flavio.hello()
 
