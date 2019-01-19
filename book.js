@@ -289,3 +289,19 @@ class BlogPostExcerpt extends Component {
     title: '',
     description: ''
   }
+
+  class UsersContainer extends React.Component {
+    constructor() {
+      this.state = {
+        users: []
+      }
+    }
+    componentDidMount() {
+      axios.get('/users').then(users =>
+        this.setState({ users: users }))
+      
+    }
+    render() {
+      return <Users users={this.state.users} />
+    }
+  }
