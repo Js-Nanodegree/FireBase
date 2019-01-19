@@ -104,3 +104,27 @@ const checkIfItsDone = () => {
       console.error(err)
     })
 }
+
+const f1 = fetch('/something.json')
+const f2 = fetch('/something2.json')
+Promise.all([f1, f2])
+  .then(res => {
+    console.log('Array of results', res)
+  })
+  .catch(err => {
+    console.error(err)
+  })
+
+  const promiseOne = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, 'one')
+  })
+  const promiseTwo = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'two')
+  })
+  Promise.race([promiseOne, promiseTwo]).then(result => {
+    console.log(result) // 'two'
+  })
+
+Promise.all([f1, f2]).then(([res1, res2]) => {
+    console.log('Results', res1, res2)
+  })
