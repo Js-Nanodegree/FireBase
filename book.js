@@ -128,3 +128,37 @@ Promise.all([f1, f2])
 Promise.all([f1, f2]).then(([res1, res2]) => {
     console.log('Results', res1, res2)
   })
+
+
+
+  const doSomethingAsync = () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve('I did something'), 3000)
+    })
+  }
+
+  const doSomething = async () => {
+    console.log(await doSomethingAsync())
+  }
+
+  const doSomethingAsync = () => {
+    return new Promise(resolve => {
+      setTimeout(() => resolve('I did something'), 3000)
+    })
+  }
+  const doSomething = async () => {
+    console.log(await doSomethingAsync())
+  }
+  console.log('Before')
+  doSomething()
+  console.log('After')
+
+  const aFunction = async () => {
+    return 'test'
+  }
+  aFunction().then(alert) // This will alert 'test'
+
+  const aFunction = async () => {
+    return Promise.resolve('test')
+  }
+  aFunction().then(alert) // This will alert 'test'
