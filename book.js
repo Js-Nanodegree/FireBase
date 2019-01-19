@@ -162,3 +162,38 @@ Promise.all([f1, f2]).then(([res1, res2]) => {
     return Promise.resolve('test')
   }
   aFunction().then(alert) // This will alert 'test'
+
+  const list = ['Apple', 'Orange', 'Egg']
+list.map(item => item[0]).filter(item => item === 'A') //'A'
+
+const Button = props => {
+    return <button>{props.text}</button>
+  }
+  const SubmitButton = () => {
+    return <Button text="Submit" />
+  }
+  const LoginButton = () => {
+    return <Button text="Login" />
+  }
+
+  const Button = props => {
+  return <button onClick={props.onClickHandler}>{props.text}</button>
+}
+const LoginButton = props => {
+  return <Button text="Login" onClickHandler={props.onClickHandler} />
+}
+const Container = () => {
+  const onClickHandler = () => {
+    alert('clicked')
+  }
+  return <LoginButton onClickHandler={onClickHandler} />
+}
+
+const Sidebar = props => {
+    return <aside>{props.children}</aside>
+  }
+
+  <Sidebar>
+  <Link title="First link" />
+  <Link title="Second link" />
+</Sidebar>
